@@ -48,7 +48,8 @@ class _LoginPageState extends State<LoginPage> {
           Container(
             decoration: BoxDecoration(
               image: DecorationImage(
-                image: AssetImage('assets/turf_background.jpg'), // Add your background image in assets
+                image: AssetImage(
+                    'assets/turf_background.jpg'), // Add your background image in assets
                 fit: BoxFit.cover,
               ),
             ),
@@ -61,13 +62,17 @@ class _LoginPageState extends State<LoginPage> {
           ClipPath(
             clipper: WaveClipper(),
             child: Container(
-              height: 300, decoration: BoxDecoration(
-              gradient: LinearGradient(
-                colors: [Color.fromRGBO(74,99,83,100), Color.fromRGBO(172, 180, 113, 100)],
-                begin: Alignment.topCenter,
-                end: Alignment.center,
+              height: 300,
+              decoration: BoxDecoration(
+                gradient: LinearGradient(
+                  colors: [
+                    Color.fromRGBO(74, 99, 83, 100),
+                    Color.fromRGBO(172, 180, 113, 100)
+                  ],
+                  begin: Alignment.topCenter,
+                  end: Alignment.center,
+                ),
               ),
-            ),
               //color: Color.fromARGB(255, 255, 255, 255).withOpacity(1),
             ),
           ),
@@ -106,14 +111,19 @@ class _LoginPageState extends State<LoginPage> {
                       },
                       child: AnimatedContainer(
                         duration: Duration(milliseconds: 300),
-                        padding: EdgeInsets.symmetric(horizontal: 40, vertical: 20),
+                        padding:
+                            EdgeInsets.symmetric(horizontal: 40, vertical: 20),
                         decoration: BoxDecoration(
                           color: isUserSelected
                               ? Colors.white.withOpacity(0.8)
                               : Colors.black.withOpacity(0.7),
                           borderRadius: BorderRadius.circular(10),
                         ),
-                        child: Text('USER', style: TextStyle(color: isUserSelected ? Colors.black : Colors.white)),
+                        child: Text('USER',
+                            style: TextStyle(
+                                color: isUserSelected
+                                    ? Colors.black
+                                    : Colors.white)),
                       ),
                     ),
                     SizedBox(width: 10),
@@ -126,14 +136,19 @@ class _LoginPageState extends State<LoginPage> {
                       },
                       child: AnimatedContainer(
                         duration: Duration(milliseconds: 300),
-                        padding: EdgeInsets.symmetric(horizontal: 40, vertical: 20),
+                        padding:
+                            EdgeInsets.symmetric(horizontal: 40, vertical: 20),
                         decoration: BoxDecoration(
                           color: !isUserSelected
                               ? Colors.white.withOpacity(0.8)
                               : Colors.black.withOpacity(0.7),
                           borderRadius: BorderRadius.circular(10),
                         ),
-                        child: Text('OWNER', style: TextStyle(color: !isUserSelected ? Colors.black : Colors.white)),
+                        child: Text('OWNER',
+                            style: TextStyle(
+                                color: !isUserSelected
+                                    ? Colors.black
+                                    : Colors.white)),
                       ),
                     ),
                   ],
@@ -146,9 +161,11 @@ class _LoginPageState extends State<LoginPage> {
                     style: TextStyle(color: Colors.white),
                     decoration: InputDecoration(
                       hintText: 'Email ID / Phone Number',
-                      hintStyle: TextStyle(color: Colors.white.withOpacity(0.7)),
+                      hintStyle:
+                          TextStyle(color: Colors.white.withOpacity(0.7)),
                       enabledBorder: OutlineInputBorder(
-                        borderSide: BorderSide(color: Colors.white.withOpacity(0.7)),
+                        borderSide:
+                            BorderSide(color: Colors.white.withOpacity(0.7)),
                         borderRadius: BorderRadius.circular(10),
                       ),
                       focusedBorder: OutlineInputBorder(
@@ -167,9 +184,11 @@ class _LoginPageState extends State<LoginPage> {
                     obscureText: !_isPasswordVisible,
                     decoration: InputDecoration(
                       hintText: 'Password',
-                      hintStyle: TextStyle(color: Colors.white.withOpacity(0.7)),
+                      hintStyle:
+                          TextStyle(color: Colors.white.withOpacity(0.7)),
                       enabledBorder: OutlineInputBorder(
-                        borderSide: BorderSide(color: Colors.white.withOpacity(0.7)),
+                        borderSide:
+                            BorderSide(color: Colors.white.withOpacity(0.7)),
                         borderRadius: BorderRadius.circular(10),
                       ),
                       focusedBorder: OutlineInputBorder(
@@ -178,7 +197,9 @@ class _LoginPageState extends State<LoginPage> {
                       ),
                       suffixIcon: IconButton(
                         icon: Icon(
-                          _isPasswordVisible ? Icons.visibility : Icons.visibility_off,
+                          _isPasswordVisible
+                              ? Icons.visibility
+                              : Icons.visibility_off,
                           color: Colors.white.withOpacity(0.7),
                           size: 20, // Smaller eye icon
                         ),
@@ -195,27 +216,35 @@ class _LoginPageState extends State<LoginPage> {
                 // Sign In Button
                 ElevatedButton(
                   style: ElevatedButton.styleFrom(
-                    primary: Colors.white.withOpacity(0.8),
-                    padding: EdgeInsets.symmetric(horizontal: 100, vertical: 20),
+                    backgroundColor: Colors.white.withOpacity(0.8),
+                    padding:
+                        EdgeInsets.symmetric(horizontal: 100, vertical: 20),
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(10),
                     ),
                   ),
                   onPressed: () {
-                     Navigator.push(context, MaterialPageRoute(
-                      builder: (context) => CitySelectionPage(),));
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => CitySelectionPage(),
+                        ));
                   },
                   child: Text(
                     'REGISTER',
-                    style: TextStyle(color: Colors.black, fontWeight: FontWeight.bold),
+                    style: TextStyle(
+                        color: Colors.black, fontWeight: FontWeight.bold),
                   ),
                 ),
                 SizedBox(height: 20),
                 // Register Text
                 GestureDetector(
                   onTap: () {
-                    Navigator.push(context, MaterialPageRoute(
-                      builder: (context) => signinpage(),));
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => signinpage(),
+                        ));
                     // Navigate to Register Page (implement if needed)
                   },
                   child: Text(
