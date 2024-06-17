@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "721854066836",
+    "project_id": "turfishh",
+    "storage_bucket": "turfishh.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:721854066836:android:fe2063f9b97ee9045b4481",
+        "android_client_info": {
+          "package_name": "com.example.turf_booking_app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAnlLhjovFiS6LvvAAlqae1KKXyluvawng"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
